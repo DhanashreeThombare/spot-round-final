@@ -27,7 +27,7 @@ function RetrievedData() {
 
     try {
       console.log('Sending request to backend...'); // Debugging log
-      const res = await axios.post('http://localhost:5000/get-application', {
+      const res = await axios.post('https://spot-round-final.onrender.com/get-application', {
         applicationId,
         name,
       });
