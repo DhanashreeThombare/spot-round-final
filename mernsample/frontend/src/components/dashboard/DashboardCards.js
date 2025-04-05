@@ -18,7 +18,7 @@ const DashboardCards = ({ totalSeats }) => {
       setLoading(true);
       setError(null);
       
-      const response = await fetch('http://localhost:5000/count-registered-students');
+      const response = await fetch('https://spot-round-final.onrender.com/count-registered-students');
       
       if (!response.ok) {
         throw new Error(`Server responded with ${response.status}`);
