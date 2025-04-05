@@ -23,7 +23,7 @@ function Login({ setIsAuthenticated }) {  // Receive setIsAuthenticated as prop
     setIsLoading(true);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/admin/login', { 
+      const res = await axios.post('https://spot-round-final.onrender.com/api/admin/login', { 
         username, 
         password 
       });
