@@ -27,7 +27,7 @@ function UploadPdf() {
 
     setUploading(true);
     try {
-      const res = await axios.post('http://localhost:5000/upload', formData, {
+      const res = await axios.post('https://spot-round-final.onrender.com/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
