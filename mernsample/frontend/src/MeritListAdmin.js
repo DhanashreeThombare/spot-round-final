@@ -15,7 +15,7 @@ const MeritListAdmin = () => {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:5000/get-merit-list', { examType });
+      const response = await axios.post('https://spot-round-final.onrender.com/get-merit-list', { examType });
       console.log('API Response:', response); // Log the response for debugging
 
       if (response.data && response.data.meritListData) {
