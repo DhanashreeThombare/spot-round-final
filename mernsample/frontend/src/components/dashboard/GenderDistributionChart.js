@@ -16,7 +16,7 @@ const GenderDistributionChart = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:5000/gender-distribution', {
+        const response = await fetch('https://spot-round-final.onrender.com/gender-distribution', {
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
