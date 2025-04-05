@@ -1,0 +1,3 @@
+# .gitignore
+uploads/          # Exclude all uploaded files
+node_modules/     # Exclude node_modules (should not be pushed to GitHub)
