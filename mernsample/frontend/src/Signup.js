@@ -18,7 +18,7 @@ function Signup() {
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/signup', { username, password });
+      const res = await axios.post('https://spot-round-final.onrender.com/signup', { username, password });
       alert(res.data.message);
       navigate('/login'); // Redirect to the login page after signup
     } catch (error) {
