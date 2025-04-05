@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Grid, Card, CardContent, Typography, CircularProgress, Button, 
-  Container, Box
+  Container
 } from '@mui/material';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import GenderDistributionChart from './GenderDistributionChart';
@@ -11,12 +11,12 @@ const DashboardCards = ({ totalSeats }) => {
   const [studentsCount, setStudentsCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [apiError, setApiError] = useState(null);
-  const [error, setError] = useState(null);
+  //const [error, setError] = useState(null);
 
   const fetchData = async () => {
     try {
       setLoading(true);
-      setError(null);
+      setApiError(null);
       
       const response = await fetch('https://spot-round-final.onrender.com/count-registered-students');
       
@@ -30,7 +30,7 @@ const DashboardCards = ({ totalSeats }) => {
       
     } catch (err) {
       console.error('Error fetching student count:', err);
-      setError(err.message);
+      setApiError(err.message);
     } finally {
       setLoading(false);
     }
@@ -138,7 +138,6 @@ const DashboardCards = ({ totalSeats }) => {
     </>
   );
 };
-
 
 // return (
 //     <Container maxWidth="xl" sx={{ py: 3 }}>
