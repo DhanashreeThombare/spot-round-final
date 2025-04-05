@@ -20,7 +20,7 @@ const PercentileDistributionChart = () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await fetch('http://localhost:5000/percentile-distribution');
+        const response = await fetch('https://spot-round-final.onrender.com/percentile-distribution');
         
         if (!response.ok) throw new Error(`Server error: ${response.status}`);
     
