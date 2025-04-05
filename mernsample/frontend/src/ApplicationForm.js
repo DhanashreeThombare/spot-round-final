@@ -18,7 +18,7 @@ function ApplicationForm() {
 
   const handleSendOtp = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/generate-otp', { email });
+      const res = await axios.post('https://spot-round-final.onrender.com/generate-otp', { email });
       alert(res.data.message);
       setIsOtpSent(true);
     } catch (error) {
@@ -28,7 +28,7 @@ function ApplicationForm() {
 
   const handleVerifyOtp = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/verify-otp', { email, otp });
+      const res = await axios.post('https://spot-round-final.onrender.com/verify-otp', { email, otp });
       alert(res.data.message);
       setIsVerified(true);
     } catch (error) {
@@ -44,7 +44,7 @@ function ApplicationForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/submit-application', {
+      const res = await axios.post('https://spot-round-final.onrender.com/submit-application', {
         ...formData,
         email,
       });
