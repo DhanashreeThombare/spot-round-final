@@ -26,7 +26,7 @@ app.use('/api/admin', adminRoutes);
 
 
 //mongoose.connect('mongodb://127.0.0.1:27017/mydatabase')
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/mydatabase')
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error('Error connecting to MongoDB:', err));
 
