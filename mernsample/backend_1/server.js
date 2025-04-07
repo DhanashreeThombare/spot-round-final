@@ -776,6 +776,7 @@ app.get('/percentile-distribution', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`🌐 Access via: ${process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`}`);
 });
