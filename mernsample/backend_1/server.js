@@ -779,7 +779,7 @@ app.get('/', (req, res) => {
   res.send('Server is running');
 });
 
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`🌐 Access via: ${process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`}`);
 });
