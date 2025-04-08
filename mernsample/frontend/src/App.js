@@ -12,6 +12,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   
   return (
+<BrowserRouter>
     <Router>
       <div className="App">
         <Routes>
@@ -38,6 +39,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+</BrowserRouter>
   );
 }
 
